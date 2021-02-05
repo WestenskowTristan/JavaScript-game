@@ -25,7 +25,11 @@ var startGame = function () {
       var pickedEnemyName = enemyNames[i];
 
       // reset enemyHealth before starting new fight
+<<<<<<< HEAD
       enemyHealth = randomNumber(40, 60);
+=======
+      enemyHealth = 50;
+>>>>>>> feature/initial-game
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyName);
@@ -82,15 +86,23 @@ var fight = function (enemyName) {
       if (confirmSkip) {
         window.alert(playerName + " has decided to skip this fight. Goodbye!");
         // subtract money from playerMoney for skipping
+<<<<<<< HEAD
         playerMoney = math.max(0, playerMoney - 10);
+=======
+        playerMoney = playerMoney - 10;
+>>>>>>> feature/initial-game
         shop();
         break;
       }
     }
 
     // remove enemy's health by subtracting the amount set in the playerAttack variable
+<<<<<<< HEAD
     var damage = randomNumber(playerAttack - 3, playerAttack);
     enemyHealth = Math.max(0, enemyHealth - damage);
+=======
+    enemyHealth = enemyHealth - playerAttack;
+>>>>>>> feature/initial-game
     console.log(
       playerName +
         " attacked " +
@@ -126,8 +138,12 @@ var fight = function (enemyName) {
     }
 
     // remove players's health by subtracting the amount set in the enemyAttack variable
+<<<<<<< HEAD
     var damage = randomNumber(enemyAttack - 3, enemyAttack);
     playerHealth = Math.max(0, playerHealth - damage);
+=======
+    playerHealth = playerHealth - enemyAttack;
+>>>>>>> feature/initial-game
     console.log(
       enemyName +
         " attacked " +
@@ -192,11 +208,14 @@ var shop = function () {
   }
 };
 
+<<<<<<< HEAD
 //function to generate a random numeric value
 let randomNumber = function (min, max) {
   let value = Math.floor(Math.random() * (max - min + 1) + min);
   return value;
 };
 
+=======
+>>>>>>> feature/initial-game
 // start first game when page loads
 startGame();
